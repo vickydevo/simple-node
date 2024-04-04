@@ -1,6 +1,6 @@
 # DOWNLOAD code TO HOST SERVER and change directory to index.js
- git clone https://github.com/vickydevo/simple-node-server-ank.git
- cd simple-node-server-ank
+ git clone https://github.com/vickydevo/simple-node.git
+ cd simple-node
 # install npm and node process manager (pm2)
 sudo apt install npm -y
 npm install -g pm2
@@ -11,7 +11,7 @@ pm2 list         # View list of running processes
 pm2 logs         # View logs of all processes
 # Run application  # forever
 pm2 startup  
-pm2 stop <app_name_or_id>
+pm2 stop 0
 # reload application after code is changed
 pm2 reload index
 # startup file execute permission
