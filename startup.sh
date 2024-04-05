@@ -6,5 +6,5 @@ npm install -g pm2
 npm install
 
 # Start the Node.js application using pm2
-pm2 start /root/simple-node-server-ank/index.js
+pm2 start /root/simple-node/index.js
 pm2 startup

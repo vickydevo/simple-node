@@ -9,9 +9,10 @@ npm install
 pm2 start index.js
 pm2 list         # View list of running processes
 pm2 logs         # View logs of all processes
-# Run application  # forever
+# Run application  # forever #stop #delete
 pm2 startup  
 pm2 stop 0
+pm2 delete index
 # reload application after code is changed
 pm2 reload index
 # startup file execute permission
