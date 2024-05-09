@@ -1,22 +1,41 @@
 # DOWNLOAD code TO HOST SERVER and change directory to index.js
- git clone https://github.com/vickydevo/simple-node.git
- cd simple-node
-# install npm and node process manager (pm2)
-sudo apt install npm -y
-npm install -g pm2
+ ```git clone https://github.com/vickydevo/simple-node.git
+    cd simple-node
+```
+# install node package manger (npm) and node process manager (pm2)
+```sudo apt install npm -y
+   npm install -g pm2
+```
+# Download dependencies
+ Node Package Manager (npm) to install dependencies for a Node.js project. 
+When you run npm install in your project directory, npm reads the package.json file in that directory
+to determine which packages (dependencies) need to be installed.
+```
 npm install
+```
 # Run application even after closing client
+```
 pm2 start index.js
-pm2 list         # View list of running processes
-pm2 logs         # View logs of all processes
+```
+ - View list of running processes  and View logs of all processes
+```
+pm2 list         
+pm2 logs        
+```
 # Run application  # forever #stop #delete
+```
 pm2 startup  
 pm2 stop 0
 pm2 delete index
+```
 # reload application after code is changed
+```
 pm2 reload index
+```
 # startup file execute permission
+```
 chmod +x startup.sh
+```
 # add user data while creating image
 #!/bin/bash
 /home/ubuntu/startup.sh
