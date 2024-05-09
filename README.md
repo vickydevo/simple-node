@@ -1,10 +1,12 @@
 # DOWNLOAD code TO HOST SERVER and change directory to index.js
- ```git clone https://github.com/vickydevo/simple-node.git
-    cd simple-node
+ ```
+ git clone https://github.com/vickydevo/simple-node.git
+ cd simple-node
 ```
 # install node package manger (npm) and node process manager (pm2)
-```sudo apt install npm -y
-   npm install -g pm2
+```
+sudo apt install npm -y
+npm install -g pm2
 ```
 # Download dependencies
  Node Package Manager (npm) to install dependencies for a Node.js project. 
