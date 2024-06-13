@@ -40,6 +40,6 @@ RUN npm install
 
 # Bundle app source
 ADD . .
-ADD https://dlcdn.apache.org/maven/maven-3/3.9.7/binaries/apache-maven-3.9.7-bin.tar.gz
+ADD https://dlcdn.apache.org/maven/maven-3/3.9.7/binaries/apache-maven-3.9.7-bin.tar.gz  /opt
 EXPOSE 3000
 CMD [ "node","iptask.js" ]
