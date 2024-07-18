@@ -18,7 +18,16 @@ npm install
 # Run application even after closing client
 ```
 pm2 start index.js
+
 ```
+ - Alternate commands
+  ```
+  node index.js
+  node iptask.js
+  or
+  npm start
+  npm run run-iptask
+  ```
  - View list of running processes  and View logs of all processes
 ```
 pm2 list         
@@ -28,7 +37,7 @@ pm2 logs
 ```
 pm2 startup  
 pm2 stop 0
-pm2 delete index
+pm2 delete <index-num>
 ```
 # reload application after code is changed
 ```
