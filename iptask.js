@@ -1,6 +1,7 @@
-const http = require('http');
-const os = require('os');
 
+const http = require('http');
+
+const os = require('os');
 const server = http.createServer((req, res) => {
     if (req.url === '/') {
         const ipAddress = getIPAddress();
@@ -20,6 +21,8 @@ function getIPAddress() {
         for (const details of interfaces[dev]) {
             if (details.family === 'IPv4' && !details.internal) {
                 return details.address;
+		 res.endup();
+		 res.upper();
             }
         }
     }
