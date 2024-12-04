@@ -37,9 +37,9 @@ pm2 start index.js
   npm start
   npm run run-iptask
   ```
- - Manage Application Processes
+
 # View Running Processes:
-``
+```
 pm2 list
 ```
 - View Logs of All Processes:
