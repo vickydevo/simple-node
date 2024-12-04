@@ -3,15 +3,22 @@
  git clone https://github.com/vickydevo/simple-node.git
  cd simple-node
 ```
-# install node package manger (npm) and node process manager (pm2)
+# install node package manger (npm) 
 ```
 sudo apt install npm -y
+```
+# If not installed, download and install Node.js from Node.js official site.
+    https://nodejs.org/en/download/package-manager
+
+# node process manager (pm2)
+```
 npm install -g pm2
 ```
-# Download dependencies
- Node Package Manager (npm) to install dependencies for a Node.js project. 
-When you run npm install in your project directory, npm reads the package.json file in that directory
-to determine which packages (dependencies) need to be installed.
+
+
+# Install Dependencies
+ Use npm to install project dependencies specified in the package.json file:
+
 ```
 npm install
 ```
@@ -47,9 +54,14 @@ pm2 reload index
 ```
 chmod +x startup.sh
 ```
-# add user data while creating image
-#!/bin/bash
-/home/ubuntu/startup.sh
-# node index.js
-application starts running check with localhost:port or publicIPv4:port
-if you are using ec2 then white list port in security group
+# Access the Application
+Check the application status by accessing the URL in your browser:
+For local setups:
+
+http://localhost:<port>
+
+For EC2 instances:
+
+http://<publicIPv4>:<port>
+
+Note: Ensure the port is whitelisted in the EC2 instance security group.
