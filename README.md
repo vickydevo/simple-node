@@ -3,19 +3,30 @@
  git clone https://github.com/vickydevo/simple-node.git
  cd simple-node
 ```
-# install node package manger (npm) and node process manager (pm2)
+# install node package manger (npm) 
 ```
+sudo yum install npm -y
+    or
 sudo apt install npm -y
-npm install -g pm2
 ```
-# Download dependencies
- Node Package Manager (npm) to install dependencies for a Node.js project. 
-When you run npm install in your project directory, npm reads the package.json file in that directory
-to determine which packages (dependencies) need to be installed.
+# If not installed, download and install Node.js from Node.js official site.
+    https://nodejs.org/en/download/package-manager
+
+# node process manager (pm2)
 ```
-npm install
+sudo npm install -g pm2
 ```
-# Run application even after closing client
+
+
+# Install Dependencies
+ Use npm to install project dependencies specified in the package.json file:
+
+```
+sudo npm install
+```
+# Run the Application
+   - Start the application using PM2 to keep it running even after closing the terminal:
+
 ```
 pm2 start index.js
 
@@ -28,28 +39,44 @@ pm2 start index.js
   npm start
   npm run run-iptask
   ```
- - View list of running processes  and View logs of all processes
+
+# View Running Processes:
 ```
-pm2 list         
-pm2 logs        
+pm2 list
 ```
+- View Logs of All Processes:
+```
+pm2 logs
+```
+- Stop, Delete, or Reload Processes:
+```
+pm2 stop <process-id>
+pm2 delete <process-id>
+```
+- reload application after code is changed
+```
+pm2 reload index
+```
+
 # Run application  # forever #stop #delete
 ```
 pm2 startup  
 pm2 stop 0
 pm2 delete <index-num>
 ```
-# reload application after code is changed
-```
-pm2 reload index
-```
+
 # startup file execute permission
 ```
 chmod +x startup.sh
 ```
-# add user data while creating image
-#!/bin/bash
-/home/ubuntu/startup.sh
-# node index.js
-application starts running check with localhost:port or publicIPv4:port
-if you are using ec2 then white list port in security group
+# Access the Application
+Check the application status by accessing the URL in your browser:
+For local setups:
+
+http://localhost:<port>
+
+For EC2 instances:
+
+http://<publicIPv4>:<port>
+
+Note: Ensure the port is whitelisted in the EC2 instance security group.

@@ -5,7 +5,7 @@ const server = http.createServer((req, res) => {
     if (req.url === '/') {
         const ipAddress = getIPAddress();
         res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(`<html><body><p>Welcome to ${ipAddress}. This is the page that is visible.</p></body></html>`);
+        res.write(`<html><body><p>Welcome to Host IP : ${ipAddress}. This is the page that is visible.</p></body></html>`);
         res.end();
     }
 });
