@@ -5,6 +5,8 @@
 ```
 # install node package manger (npm) 
 ```
+sudo yum install npm -y
+    or
 sudo apt install npm -y
 ```
 # If not installed, download and install Node.js from Node.js official site.
@@ -12,7 +14,7 @@ sudo apt install npm -y
 
 # node process manager (pm2)
 ```
-npm install -g pm2
+sudo npm install -g pm2
 ```
 
 
@@ -20,7 +22,7 @@ npm install -g pm2
  Use npm to install project dependencies specified in the package.json file:
 
 ```
-npm install
+sudo npm install
 ```
 # Run the Application
    - Start the application using PM2 to keep it running even after closing the terminal:
