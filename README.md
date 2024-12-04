@@ -22,7 +22,9 @@ npm install -g pm2
 ```
 npm install
 ```
-# Run application even after closing client
+# Run the Application
+   - Start the application using PM2 to keep it running even after closing the terminal:
+
 ```
 pm2 start index.js
 
@@ -35,21 +37,32 @@ pm2 start index.js
   npm start
   npm run run-iptask
   ```
- - View list of running processes  and View logs of all processes
+ - Manage Application Processes
+# View Running Processes:
+``
+pm2 list
 ```
-pm2 list         
-pm2 logs        
+- View Logs of All Processes:
 ```
+pm2 logs
+```
+- Stop, Delete, or Reload Processes:
+```
+pm2 stop <process-id>
+pm2 delete <process-id>
+```
+- reload application after code is changed
+```
+pm2 reload index
+```
+
 # Run application  # forever #stop #delete
 ```
 pm2 startup  
 pm2 stop 0
 pm2 delete <index-num>
 ```
-# reload application after code is changed
-```
-pm2 reload index
-```
+
 # startup file execute permission
 ```
 chmod +x startup.sh
